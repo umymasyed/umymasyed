@@ -12,7 +12,7 @@
   </a>
 </div>
 <ul>
-  <li>🔭 I’m currently working on <strong>Fortify App</strong></li>
+  <li>🔭 I’m currently working on <strong>STA SMART CLASSES WEBAPP</strong></li>
   <li>🌱 I’m currently learning <strong>React.js</strong></li>
   <li>💬 Ask me about <strong>JavaScript, HTML, CSS</strong></li>
   <li>📫 How to reach me: <strong>syedomaima19@gmail.com</strong></li>
