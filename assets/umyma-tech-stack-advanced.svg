@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#02050a"/>
+    <stop offset=".45" stop-color="#06121c"/>
+    <stop offset="1" stop-color="#020409"/>
+  </linearGradient>
+  <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#22d3ee"/>
+    <stop offset=".5" stop-color="#a5f3fc"/>
+    <stop offset="1" stop-color="#22d3ee"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#0891b2"/>
+    <stop offset="1" stop-color="#67e8f9"/>
+  </linearGradient>
+  <radialGradient id="orb">
+    <stop offset="0" stop-color="#67e8f9" stop-opacity=".28"/>
+    <stop offset=".55" stop-color="#22d3ee" stop-opacity=".08"/>
+    <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+    <path d="M32 0H0V32" fill="none" stroke="#102333" stroke-width="1"/>
+  </pattern>
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="soft">
+    <feGaussianBlur stdDeviation="16"/>
+  </filter>
+  <clipPath id="clip"><rect x="28" y="28" width="1544" height="564" rx="20"/></clipPath>
+  <style>
+    .scan { animation: scan 4s linear infinite; }
+    .pulse { animation: pulse 1.7s ease-in-out infinite; }
+    .blink { animation: blink 1s steps(2,end) infinite; }
+    .dash { stroke-dasharray: 8 12; animation: dash 2.8s linear infinite; }
+    .float { animation: float 3s ease-in-out infinite; }
+    @keyframes scan { from{transform:translateY(-110px)} to{transform:translateY(710px)} }
+    @keyframes pulse { 0%,100%{opacity:.38} 50%{opacity:1} }
+    @keyframes blink { 50%{opacity:0} }
+    @keyframes dash { to{stroke-dashoffset:-80} }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+    text{font-family:monospace}
+  </style>
+</defs>
+
+<rect width="1600" height="620" rx="28" fill="#010307"/>
+<rect x="20" y="20" width="1560" height="580" rx="24" fill="url(#bg)" stroke="#20394c" stroke-width="2"/>
+<rect x="28" y="28" width="1544" height="564" rx="20" fill="url(#grid)" opacity=".52"/>
+
+<circle cx="1335" cy="205" r="240" fill="url(#orb)" filter="url(#soft)"/>
+
+<g clip-path="url(#clip)" pointer-events="none">
+  <rect class="scan" x="28" y="28" width="1544" height="86" fill="#67e8f9" opacity=".045"/>
+  <line class="scan" x1="28" y1="28" x2="1572" y2="28" stroke="#67e8f9" stroke-width="2" opacity=".9" filter="url(#glow)"/>
+</g>
+
+<!-- top chrome -->
+<rect x="52" y="52" width="1496" height="44" rx="9" fill="#050b12" stroke="#1d3447"/>
+<circle cx="78" cy="74" r="6" fill="#ef4444"/>
+<circle cx="98" cy="74" r="6" fill="#eab308"/>
+<circle cx="118" cy="74" r="6" fill="#22c55e"/>
+<text x="145" y="80" fill="#64748b" font-size="14">UMYMA_OS://TECH_STACK_SCAN</text>
+<text x="1360" y="80" fill="#22c55e" font-size="13" class="pulse">● LIVE</text>
+
+<!-- title -->
+<text x="66" y="145" fill="#67e8f9" font-size="13">&gt; scanning modules...</text>
+<text x="64" y="184" fill="#f8fafc" font-size="35" font-weight="700">TECH STACK / SYSTEM MAP</text>
+<text x="66" y="210" fill="#64748b" font-size="12">CORE TOOLS • RUNTIME • DATA • AI • EXPERIMENTAL</text>
+
+<!-- central system map -->
+<rect x="66" y="246" width="1468" height="260" rx="16" fill="#03070c" stroke="#1c3447"/>
+
+<!-- center core -->
+<circle cx="800" cy="376" r="88" fill="#06141e" stroke="#2b6578"/>
+<circle cx="800" cy="376" r="62" fill="none" stroke="#22d3ee" opacity=".5" class="dash"/>
+<circle cx="800" cy="376" r="18" fill="#67e8f9" opacity=".9" filter="url(#glow)"/>
+<text x="800" y="366" text-anchor="middle" fill="#f8fafc" font-size="17" font-weight="700">UMYMA</text>
+<text x="800" y="389" text-anchor="middle" fill="#67e8f9" font-size="11">STACK CORE</text>
+
+<!-- connecting lines -->
+<path d="M710 350 C620 305 535 302 430 305" fill="none" stroke="#22d3ee" stroke-width="2" opacity=".75"/>
+<path d="M710 402 C610 450 535 452 430 447" fill="none" stroke="#22d3ee" stroke-width="2" opacity=".6"/>
+<path d="M890 350 C980 305 1065 302 1170 305" fill="none" stroke="#22d3ee" stroke-width="2" opacity=".75"/>
+<path d="M890 402 C990 450 1070 452 1170 447" fill="none" stroke="#22d3ee" stroke-width="2" opacity=".6"/>
+
+<circle cx="430" cy="305" r="5" fill="#67e8f9" class="pulse"/>
+<circle cx="430" cy="447" r="5" fill="#67e8f9" class="pulse"/>
+<circle cx="1170" cy="305" r="5" fill="#67e8f9" class="pulse"/>
+<circle cx="1170" cy="447" r="5" fill="#67e8f9" class="pulse"/>
+
+<!-- left frontend card -->
+<rect x="94" y="272" width="320" height="78" rx="11" fill="#07131d" stroke="#1e5266"/>
+<text x="116" y="299" fill="#67e8f9" font-size="12">01 // FRONTEND</text>
+<text x="116" y="326" fill="#f8fafc" font-size="15">React • Next.js • TypeScript</text>
+<rect x="116" y="335" width="245" height="4" rx="2" fill="#102734"/>
+<rect x="116" y="335" width="228" height="4" rx="2" fill="url(#bar)"/>
+<text x="370" y="338" fill="#22c55e" font-size="10">93%</text>
+
+<!-- left backend card -->
+<rect x="94" y="402" width="320" height="78" rx="11" fill="#07131d" stroke="#1e5266"/>
+<text x="116" y="429" fill="#67e8f9" font-size="12">02 // BACKEND</text>
+<text x="116" y="456" fill="#f8fafc" font-size="15">Node.js • Express • REST</text>
+<rect x="116" y="465" width="245" height="4" rx="2" fill="#102734"/>
+<rect x="116" y="465" width="213" height="4" rx="2" fill="url(#bar)"/>
+<text x="370" y="468" fill="#22c55e" font-size="10">87%</text>
+
+<!-- right data card -->
+<rect x="1186" y="272" width="320" height="78" rx="11" fill="#07131d" stroke="#1e5266"/>
+<text x="1208" y="299" fill="#67e8f9" font-size="12">03 // DATA</text>
+<text x="1208" y="326" fill="#f8fafc" font-size="15">Supabase • MySQL • SQL</text>
+<rect x="1208" y="335" width="245" height="4" rx="2" fill="#102734"/>
+<rect x="1208" y="335" width="198" height="4" rx="2" fill="url(#bar)"/>
+<text x="1461" y="338" fill="#22c55e" font-size="10">81%</text>
+
+<!-- right AI card -->
+<rect x="1186" y="402" width="320" height="78" rx="11" fill="#07131d" stroke="#1e5266"/>
+<text x="1208" y="429" fill="#67e8f9" font-size="12">04 // AI</text>
+<text x="1208" y="456" fill="#f8fafc" font-size="15">OpenAI • LLM • Prompt Eng.</text>
+<rect x="1208" y="465" width="245" height="4" rx="2" fill="#102734"/>
+<rect x="1208" y="465" width="184" height="4" rx="2" fill="url(#bar)"/>
+<text x="1461" y="468" fill="#f59e0b" font-size="10">BUILDING</text>
+
+<!-- experimental chips -->
+<g class="float">
+<rect x="530" y="488" width="540" height="38" rx="19" fill="#06141e" stroke="#24556a"/>
+<text x="800" y="513" text-anchor="middle" fill="#cbd5e1" font-size="12">
+  THREE.JS  •  LENIS  •  HARDWARE / IoT  •  ESP32
+</text>
+</g>
+
+<!-- bottom status -->
+<line x1="66" y1="548" x2="1534" y2="548" stroke="#1d3447"/>
+<text x="66" y="575" fill="#475569" font-size="11">SCAN RESULT :: 04 CORE MODULES / 02 EXPERIMENTAL TRACKS / API READY</text>
+<text x="1325" y="575" fill="#22c55e" font-size="11" class="pulse">[ SYSTEM READY ]</text>
+<text x="1510" y="575" fill="#67e8f9" font-size="11" text-anchor="end">_</text>
+</svg>
