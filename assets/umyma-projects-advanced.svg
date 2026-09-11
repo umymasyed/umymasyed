@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="780" viewBox="0 0 1600 780">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#02050a"/><stop offset=".5" stop-color="#07131d"/><stop offset="1" stop-color="#020409"/>
+  </linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#22d3ee"/><stop offset=".5" stop-color="#a5f3fc"/><stop offset="1" stop-color="#22d3ee"/>
+  </linearGradient>
+  <linearGradient id="purple" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/>
+  </linearGradient>
+  <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+    <path d="M36 0H0V36" fill="none" stroke="#102332" stroke-width="1"/>
+  </pattern>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  <clipPath id="clip"><rect x="28" y="28" width="1544" height="704" rx="20"/></clipPath>
+  <style>
+    .scan{animation:scan 4s linear infinite}.pulse{animation:pulse 1.7s ease-in-out infinite}
+    .dash{stroke-dasharray:9 12;animation:dash 2.6s linear infinite}.float{animation:float 3s ease-in-out infinite}
+    .blink{animation:blink 1s steps(2,end) infinite}
+    @keyframes scan{from{transform:translateY(-120px)}to{transform:translateY(850px)}}
+    @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+    @keyframes dash{to{stroke-dashoffset:-84}}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+    @keyframes blink{50%{opacity:0}}
+    text{font-family:monospace}
+  </style>
+</defs>
+
+<rect width="1600" height="780" rx="28" fill="#010307"/>
+<rect x="20" y="20" width="1560" height="740" rx="24" fill="url(#bg)" stroke="#20394c" stroke-width="2"/>
+<rect x="28" y="28" width="1544" height="704" rx="20" fill="url(#grid)" opacity=".52"/>
+
+<circle cx="1380" cy="160" r="240" fill="#22d3ee" opacity=".05" filter="url(#soft)"/>
+<circle cx="220" cy="650" r="180" fill="#818cf8" opacity=".04" filter="url(#soft)"/>
+
+<g clip-path="url(#clip)" pointer-events="none">
+  <rect class="scan" x="28" y="28" width="1544" height="92" fill="#67e8f9" opacity=".045"/>
+  <line class="scan" x1="28" y1="28" x2="1572" y2="28" stroke="#67e8f9" stroke-width="2" filter="url(#glow)"/>
+</g>
+
+<!-- Header -->
+<rect x="52" y="52" width="1496" height="44" rx="9" fill="#050b12" stroke="#1d3447"/>
+<circle cx="78" cy="74" r="6" fill="#ef4444"/><circle cx="98" cy="74" r="6" fill="#eab308"/><circle cx="118" cy="74" r="6" fill="#22c55e"/>
+<text x="145" y="80" fill="#64748b" font-size="14">UMYMA_OS://PROJECT_MATRIX</text>
+<text x="1360" y="80" fill="#22c55e" font-size="13" class="pulse">● LIVE</text>
+
+<text x="66" y="145" fill="#67e8f9" font-size="13">&gt; loading selected work...</text>
+<text x="64" y="184" fill="#f8fafc" font-size="36" font-weight="700">PROJECTS / BUILT SYSTEMS</text>
+<text x="66" y="210" fill="#64748b" font-size="12">PRODUCTS • ARCHITECTURE • API • REAL-TIME • AI-READY</text>
+
+<!-- Project 1 -->
+<g>
+<rect x="66" y="245" width="1468" height="145" rx="15" fill="#040a10" stroke="#1f5368"/>
+<rect x="66" y="245" width="8" height="145" rx="4" fill="#22d3ee" filter="url(#glow)"/>
+
+<text x="94" y="277" fill="#67e8f9" font-size="12">01 // PRODUCTION</text>
+<text x="94" y="312" fill="#f8fafc" font-size="28" font-weight="700">WAYKRAFT</text>
+<text x="94" y="338" fill="#94a3b8" font-size="13">CUSTOM FULL-STACK E-COMMERCE PLATFORM</text>
+
+<text x="430" y="279" fill="#64748b" font-size="11">STACK</text>
+<text x="430" y="303" fill="#cbd5e1" font-size="13">Next.js • React • TypeScript</text>
+<text x="430" y="328" fill="#cbd5e1" font-size="13">Node.js • Express • Supabase</text>
+
+<text x="790" y="279" fill="#64748b" font-size="11">SYSTEM</text>
+<text x="790" y="303" fill="#cbd5e1" font-size="13">Products → Cart → Orders</text>
+<text x="790" y="328" fill="#cbd5e1" font-size="13">Auth → Admin → Real-time Status</text>
+
+<rect x="1218" y="278" width="270" height="45" rx="9" fill="#06141d" stroke="#25637a"/>
+<text x="1353" y="306" text-anchor="middle" fill="#67e8f9" font-size="12">VIEW LIVE SYSTEM  →</text>
+<text x="1353" y="346" text-anchor="middle" fill="#475569" font-size="10">STATUS: DEPLOYED</text>
+</g>
+
+<!-- Project 2 -->
+<g>
+<rect x="66" y="408" width="1468" height="145" rx="15" fill="#040a10" stroke="#3f4771"/>
+<rect x="66" y="408" width="8" height="145" rx="4" fill="url(#purple)" filter="url(#glow)"/>
+
+<text x="94" y="440" fill="#a5b4fc" font-size="12">02 // REAL-TIME</text>
+<text x="94" y="475" fill="#f8fafc" font-size="28" font-weight="700">TALK OVIA</text>
+<text x="94" y="501" fill="#94a3b8" font-size="13">AI-READY REAL-TIME CHAT APPLICATION</text>
+
+<text x="430" y="442" fill="#64748b" font-size="11">STACK</text>
+<text x="430" y="466" fill="#cbd5e1" font-size="13">Next.js • React • TypeScript</text>
+<text x="430" y="491" fill="#cbd5e1" font-size="13">Authentication • Session Handling</text>
+
+<text x="790" y="442" fill="#64748b" font-size="11">SYSTEM</text>
+<text x="790" y="466" fill="#cbd5e1" font-size="13">User → Auth → Chat → AI Layer</text>
+<text x="790" y="491" fill="#cbd5e1" font-size="13">Designed for future AI conversations</text>
+
+<rect x="1218" y="445" width="270" height="45" rx="9" fill="#0b0d1d" stroke="#53588f"/>
+<text x="1353" y="473" text-anchor="middle" fill="#c4b5fd" font-size="12">OPEN CHAT SYSTEM  →</text>
+<text x="1353" y="513" text-anchor="middle" fill="#475569" font-size="10">STATUS: AI-READY</text>
+</g>
+
+<!-- Project 3 -->
+<g>
+<rect x="66" y="571" width="1468" height="115" rx="15" fill="#040a10" stroke="#1f5368"/>
+<rect x="66" y="571" width="8" height="115" rx="4" fill="#22d3ee" filter="url(#glow)"/>
+
+<text x="94" y="603" fill="#67e8f9" font-size="12">03 // WEB APP</text>
+<text x="94" y="637" fill="#f8fafc" font-size="25" font-weight="700">QURAN APP</text>
+<text x="94" y="661" fill="#94a3b8" font-size="12">RESPONSIVE APPLICATION • REUSABLE COMPONENT ARCHITECTURE</text>
+
+<text x="650" y="606" fill="#64748b" font-size="11">STACK</text>
+<text x="650" y="632" fill="#cbd5e1" font-size="13">React • Next.js • TypeScript • Tailwind CSS</text>
+
+<rect x="1218" y="603" width="270" height="45" rx="9" fill="#06141d" stroke="#25637a"/>
+<text x="1353" y="631" text-anchor="middle" fill="#67e8f9" font-size="12">VIEW APPLICATION  →</text>
+<text x="1353" y="670" text-anchor="middle" fill="#475569" font-size="10">STATUS: DEPLOYED</text>
+</g>
+
+<!-- footer -->
+<line x1="66" y1="710" x2="1534" y2="710" stroke="#1d3447"/>
+<text x="66" y="732" fill="#475569" font-size="11">PROJECT MATRIX :: 03 SELECTED BUILDS</text>
+<text x="1230" y="732" fill="#22c55e" font-size="11" class="pulse">[ BUILD → SHIP → ITERATE ]</text>
+<text x="1510" y="732" fill="#67e8f9" font-size="11" text-anchor="end"><tspan class="blink">█</tspan></text>
+</svg>
