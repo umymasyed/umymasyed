@@ -27,6 +27,14 @@
 <br/>
 
 <a href="#top">
+<img src="./assets/umyma-github-live-clean.svg"
+     width="100%"
+     alt="Umyma Syed - GitHub Live"/>
+</a>
+
+<br/>
+
+<a href="#top">
 <img src="./assets/umyma-final-transmission.svg"
      width="100%"
      alt="Umyma Syed - Final Transmission"/>
